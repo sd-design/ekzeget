@@ -14,7 +14,7 @@
 <!--noindex-->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,700,900" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <!-- Скрипты кнопок соцсетей -->
@@ -43,19 +43,19 @@ VK.Widgets.Like("vk_like", {type: "mini"});
 <section id="head">
     <div class="container">
         <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <ul class="nav navbar-nav">
-            <li><a href="/o_proekte.php"><div class="tehnav" style="padding-left:0"> О проекте</div></a></li>
-            <li><a href="/new_tolk.php"><div class="tehnav"> Обновления </div></a></li>
-            <li><a href="/generator.php"><div class="tehnav">Генератор ссылок</div></a></li>
-            <li><a href="/zap.php"><div class="tehnav"> Гостевая </div></a></li>
-        </ul>
-       
-  </div>
+
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li><a href="/o_proekte.php"><div class="tehnav" style="padding-left:0"> О проекте</div></a></li>
+                    <li><a href="/new_tolk.php"><div class="tehnav"> Обновления </div></a></li>
+                    <li><a href="/generator.php"><div class="tehnav">Генератор ссылок</div></a></li>
+                    <li><a href="/zap.php"><div class="tehnav"> Гостевая </div></a></li>
+                </ul>
+            
+        </div>
  <div class="navbar-right">
               <div class="nav_verh">
-Здравствуйте друг, нажмите <a id="toggler1"><b>меню</b></a><div style="display: none;" class="t2">
+Здравствуйте друг, нажми <a id="toggler1"><b>меню</b></a><div style="display: none;" class="t2">
 <a href="#" id="Roboto">Roboto</a><br />
 <a href="#" id="Ubuntu">Ubuntu</a><br />
 <a href="#" id="OpenSans">Open Sans</a><br />
@@ -74,22 +74,29 @@ VK.Widgets.Like("vk_like", {type: "mini"});
     <div class="row">
         <div class="col-md-4"><!-- Календарь -->
       <!--noindex-->
-<div style="height:180px; width:300px; border: 1px solid #C7C7C7;">
-<div id ="chten">
-
-
-<div id="response">
-<div style="width: 22px; float:right; margin: -5px 0 0 260px; cursor: pointer;position: absolute; " ><a id="toggler" title="Перейти на любую дату чтения"><img src="IMG/day.png"/ ></a><div id="answer" style="display: none;">Введите дату богослужебных чтений:<br /> <input type="date" id="data_today" maxlength="15" pattern="\d+.+" placeholder="гггг.мм.дд">     <button type="submit" onclick="SendRequestPOST();" name="submit" style="padding: 6px 8px 5px 8px;font-size: 11px;">OK</button></div ></div>
-
-
-<div id="chten_today"><b>Сегодня <font color=#DF0404>28 июля</font></b></div>
-<div class="p_content3"><div id="page_content3" class="scroll-pane1"><div style="text-align: center"><span style=" font-size: 14px;">Пятница 8-й седмицы по Пятидесятнице</span></div><div style="text-align: center"><span style=" font-size: 14px;">Равноапостольного великого князя Владимира</span></div><hr style="width:100%;" /><span style=" font-size: 14px;"><b>Утреня:</b> <span style="color:#666"><a href="glava.php?kn_rus=Ин&gl=10&marker_st=9-16&tolk=&data_today=28.07.2017#9">Ин. 10:9-16</a> или <a href="glava.php?kn_rus=Мф&gl=13&marker_st=44-54&tolk=&data_today=28.07.2017#44">Мф. 13:44-54</a></span><br /><b>Литургия:</b> Ап.: <span style="color:#666">Равноап.: <a href="glava.php?kn_rus=Гал&gl=1&marker_st=11-19&tolk=&data_today=28.07.2017#11">Гал. 1:11-19</a>,</span> Ев.: <span style="color:#666">Равноап.: <a href="glava.php?kn_rus=Ин&gl=10&marker_st=1-9&tolk=&data_today=28.07.2017#1">Ин. 10:1-9</a></span><br /></span></div>
-</div>
-<div id="zavtr_chten"><input id="dat_send" type="hidden"><a onclick="$('#dat_send').attr('value', '27.07.2017'); SendRequest();" rel="nofollow" title="Предыдущий день">&#8592; Пред.</a> <span style="color: #c4c4c4;">|</span> <a style="color: #c4c4c4; cursor: text;text-decoration: none;">Сегодня</a> <span style="color: #c4c4c4;">|</span> <a onclick="$('#dat_send').attr('value', '29.07.2017');SendRequest();" rel="nofollow" title="Следующий день">След. &#8594;</a></div>
-</div>
-
-
-</div>
+<div class="calendar_inside">
+    <div id ="chten">
+                <div id="response">
+                            <div class="icon-calendar"><a id="toggler" title="Перейти на любую дату чтения"><img src="IMG/day.png"/ ></a>
+                            </div>
+                            <div id="answer" style="display: none;">Введите дату богослужебных чтений:<br /> <input type="date" id="data_today" maxlength="15" pattern="\d+.+" placeholder="гггг.мм.дд">     <button type="submit" onclick="SendRequestPOST();" name="submit" style="padding: 6px 8px 5px 8px;font-size: 11px;">OK</button>
+                            </div>
+                            <div id="chten_today">Сегодня <font color=#DF0404>28 июля</font></div>
+                            <div class="p_content3">
+                                <div id="page_content3" class="scroll-pane1">
+                                    <!-- ajax block -->
+                                    <div style="text-align: center"><span style=" font-size: 13px;">Четверг 10-й седмицы по Пятидесятнице</span></div><div style="text-align: center"><span style=" font-size: 13px;">Смоленской иконы Божией Матери «Одигитрия» (Путеводительница)</span>
+                                    </div>
+                                    <div style="text-align: center">
+                                        <span style="font-size: 13px;">Святителя Питирима Тамбовского</span></div><hr style="width:100%;"><span style=" font-size: 13px;"><b>Утреня:</b> <span style="color:#666"><a href="glava.php?kn_rus=Лк&amp;gl=1&amp;marker_st=39-49, 56&amp;tolk=&amp;data_today=10.08.2017#39">Лк. 1:39-49, 56</a></span>
+                                        <br><b>Литургия:</b> Ап.: <span style="color:#666"><a href="glava.php?kn_rus=2 Кор&amp;gl=1&amp;marker_st=1–7&amp;tolk=&amp;data_today=10.08.2017#1">2 Кор. 1:1–7</a> Богородицы: <a href="glava.php?kn_rus=Флп&amp;gl=2&amp;marker_st=5-11&amp;tolk=&amp;data_today=10.08.2017#5">Флп. 2:5-11</a> или Свт.: <a href="glava.php?kn_rus=Евр&amp;gl=13&amp;marker_st=17-21&amp;tolk=&amp;data_today=10.08.2017#17">Евр. 13:17-21</a>,</span> Ев.: <span style="color:#666"><a href="glava.php?kn_rus=Мф&amp;gl=21&amp;marker_st=43–46&amp;tolk=&amp;data_today=10.08.2017#43">Мф. 21:43–46</a> Богородицы: <a href="glava.php?kn_rus=Лк&amp;gl=10&amp;marker_st=38-42&amp;tolk=&amp;data_today=10.08.2017#38">Лк. 10:38-42</a>, <a href="glava.php?kn_rus=Лк&amp;gl=11&amp;marker_st=27-28&amp;tolk=&amp;data_today=10.08.2017#27">Лк. 11:27-28</a> или Свт.: <a href="glava.php?kn_rus=Лк&amp;gl=6&amp;marker_st=17-23&amp;tolk=&amp;data_today=10.08.2017#17">Лк. 6:17-23</a></span><br></span>
+                                    <!-- end ajax block -->
+                            </div>
+                    </div>
+                    <div id="zavtr_chten"><input id="dat_send" type="hidden"><a onclick="$('#dat_send').attr('value', '27.07.2017'); SendRequest();" rel="nofollow" title="Предыдущий день">&#8592; Пред.</a> <span style="color: #c4c4c4;">|</span> <a style="color: #c4c4c4; cursor: text;text-decoration: none;">Сегодня</a> <span style="color: #c4c4c4;">|</span> <a onclick="$('#dat_send').attr('value', '29.07.2017');SendRequest();" rel="nofollow" title="Следующий день">След. &#8594;</a>
+                    </div>
+                </div>
+    </div>
 </div>
 <!--/noindex-->  
         </div>
@@ -105,7 +112,7 @@ VK.Widgets.Like("vk_like", {type: "mini"});
                         <a href="https://twitter.com/EkzegetRU" target="_blank" title="Мы в твиттере">
                         <img style="margin: 0 5px 0 0" src="/IMG/tvit.png" /></a>
                         <a href="https://www.youtube.com/channel/UCymsjx24eU3kRFUjeBsh47A" target="_blank" title="Наш канал на YouTube">
-<img style="margin: 0 5px 0 0" src="/IMG/youtube.png"></a>
+                        <img style="margin: 0 5px 0 0" src="/IMG/youtube.png"></a>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -113,8 +120,8 @@ VK.Widgets.Like("vk_like", {type: "mini"});
     <form action="search_stih.php" method="get">
         <div class="search_pano"> 
 <input id="search" type="search" name="search" maxlength="100" class="form-control" required pattern="[^<|^>]{3,}" placeholder="Поиск...">
-<a onclick="advanced_search();" title="Расширенный поиск" id="togglersearch" class="search_button" style="padding-top: 10px; position: absolute; right: 65px; height: 40px; border: none; background: none;"><svg style="margin-top: 1px; width: 20px;" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" viewBox="0 0 24 24" class="icon icons8-Вертикальный-микшер-настроек" >    <path d="M 5 2 L 5 4 L 4 4 C 3.448 4 3 4.448 3 5 L 3 6 C 3 6.552 3.448 7 4 7 L 8 7 C 8.552 7 9 6.552 9 6 L 9 5 C 9 4.448 8.552 4 8 4 L 7 4 L 7 2 L 5 2 z M 11 2 L 11 16 L 10 16 C 9.448 16 9 16.448 9 17 L 9 18 C 9 18.552 9.448 19 10 19 L 14 19 C 14.552 19 15 18.552 15 18 L 15 17 C 15 16.448 14.552 16 14 16 L 13 16 L 13 2 L 11 2 z M 17 2 L 17 9 L 16 9 C 15.448 9 15 9.448 15 10 L 15 11 C 15 11.552 15.448 12 16 12 L 20 12 C 20.552 12 21 11.552 21 11 L 21 10 C 21 9.448 20.552 9 20 9 L 19 9 L 19 2 L 17 2 z M 5 8 L 5 22 L 7 22 L 7 8 L 5 8 z M 17 13 L 17 22 L 19 22 L 19 13 L 17 13 z M 11 20 L 11 22 L 13 22 L 13 20 L 11 20 z"></path></svg></a></a>
-<button class="search_button" type="submit" name="submit" style="padding-bottom: 5px; position: absolute; right: 25px; height: 40px; border: none; background: none;"><img src="/IMG/search.png" title="Начать поиск" style="width: 90%;"></button>
+<a onclick="advanced_search();" title="Расширенный поиск" id="togglersearch" class="search-settings"><img src="/IMG/search_settings.png" title="Расширенный поиск"></a></a>
+<button class="search_button" type="submit"><img src="/IMG/search.png" title="Начать поиск" style="width: 90%;"></button>
                 <div style="display: none;" class="tsear">
                 <div id="res_advanced">
                 <br /><div style="text-align: center;"><img src="IMG/loading.gif" style="width:50px" /></div><br />
@@ -124,13 +131,13 @@ VK.Widgets.Like("vk_like", {type: "mini"});
         </div>
     </form>
 <!--/noindex-->
-<div class="general_menu">
-<a href="/propovedi.php">Проповеди</a>
-<a href="/slovari.php">Словари</a> 
-<a href="/maps.php">Карты</a> 
-<a href="/tolks_all.php">Экзегеты</a> 
-<a href="/lektorij.php">Лекторий</a> 
-</div>
+                        <div class="general_menu">
+                        <a href="/propovedi.php" class="btn btn-default">Проповеди</a>
+                        <a href="/slovari.php" class="btn btn-default">Словари</a> 
+                        <a href="/maps.php" class="btn btn-default">Карты</a> 
+                        <a href="/tolks_all.php" class="btn btn-default">Экзегеты</a> 
+                        <a href="/lektorij.php" class="btn btn-default">Лекторий</a> 
+                        </div>
                     </div>
                 </div>
         </div>
@@ -147,10 +154,10 @@ VK.Widgets.Like("vk_like", {type: "mini"});
 <div class="container">
     <div class="row">
         <!--левый блок -->
-        <div class="col-sm-2">
-<!-- НАЧАЛО МЕНЮ -->
+        <div class="col-sm-3">
+        <!-- НАЧАЛО МЕНЮ -->
             <ul id="myTab" class="nav nav-tabs">
-                <li><a class="menu_bible" href="#panel1">Новый Завет</a></li>
+                <li class="active"><a class="menu_bible" href="#panel1">Новый Завет</a></li>
                 <li><a class="menu_bible" href="#panel2">Ветхий Завет</a></li>
             </ul>
                 <div class="tabsmenu">
@@ -250,234 +257,179 @@ VK.Widgets.Like("vk_like", {type: "mini"});
             </div>
     </div>
 <!-- КОНЕЦ МЕНЮ -->
+        <!-- BANNERs -->
+        <!--noindex-->
+        <div class="pano-banners">
+        <a style="color:red" href="https://fond.predanie.ru/blago/340442/">Помочь нашему проекту</a><br />
+        <a href="banners.php">НАШЫ<br />БАННЕРЫ</a>
+                <div class="banners" align="center">
+                    <!-- Put this div tag to the place, where the Like block will be -->
+                    <div id="vk_like" style="width: 100px"></div>
+                    <br />
+                    <div id="fb-root" style="width: 100px"></div>
+                    <div class="fb-like" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false" style="width: 100px"></div>
+                    <br /><br />
+
+                    <div id="ok_shareWidget"></div>
+                </div>
+        </div>
+        <!--/noindex-->
+        <!-- END BANNERs -->
         </div>
         <!--центральный блок -->
-        <div class="col-sm-7">
-<iframe width="590" height="273" src="https://www.youtube.com/embed/k67h4aeKXg8?rel=0" frameborder="0" allowfullscreen=""></iframe>
+        <div class="col-sm-6 page-control">
+        <iframe width="100%" height="273" src="https://www.youtube.com/embed/k67h4aeKXg8?rel=0" frameborder="0" allowfullscreen=""></iframe>
 
-        <div class="page-content">
-        <span style='color: #797979; margin-left: 15px; font-weight: 900;'>ЭкзегетЪ.RU</span><hr /><p>
-        Приветствуем Вас на Православном сайте, посвященном исследованию и толкованию Священного Писания! В настоящее время ЭкзегетЪ.RU - самая функциональная Онлайн Библия в Рунете. На сайте имеются толкования Священного Писания, множество переводов, аудиобиблия, планы чтения Библии, словари, проповеди, Библейские карты. Читайте и изучайте Священное Писание, оставляйте закладки на нужные стихи, пишите заметки, исследуйте оригинальные манускрипты Писания, делитесь толкованиями с друзьями... </p><p>Но, обо всем по порядку.
-        </p><table cellspacing="10"><tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 35px; padding:15px; opacity:.8" src="IMG/kniga.png" /></td><td><p>
-        Как пользоваться нашим сайтом? Подробная справка находится <a href="/kak_polzovatsya.php">здесь</a>.</p><p>
-        В левом столбце выберите нужную Вам Библейскую книгу, затем главу, и в появившемся списке стихов, интересующий Вас стих. Справа в столбце будет список всех отцов Православной Церкви, учителей и исследователей, которые толковали или исследовали выбранный Вами стих.</p><p>
-        Также на странице главы можно видеть всех экзегетов, у которых есть толкования хотя бы на один стих просматриваемой главы. Кликнув на имя любого из толкователей, Вы сможете просматривать все его толкования на главу на одной странице.</p><p>
-        Вкладка "Исследования" отличается от толкований тем, что в ней помещены работы, касающиеся не самой экзегезы, а исследования текста (лингвистического, текстологического, исторического и проч.)</p><p>
-        Кликнув на название любой книги Священного Писания в главном меню, Вы узнаете о ней много полезной информации.</p>
-        <p>Сейчас на сайте размещено <b>144 803</b> толкования на Священное Писание.
-        </p></td></tr><tr><td style=" vertical-align:middle;text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 30px; padding:15px; opacity:.8" src="IMG/columns.png" />
-        </td><td><p>
-        На сайте Вашему вниманию предложено несколько переводов Библии. Причем, кликнув на сответствующий значок, Вы можете просмотреть все переводы исследуемой главы параллельными столбцами.</p>
-        </td></tr><tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 30px; padding:15px; opacity:.8" src="IMG/search.png" /></td><td><p>
-        Поиск осуществляется по толкованиям и по тексту Священного Писания. Причем поиск по Библии можно осуществлять непосредственно просматривая отдельный стих. Просто кликните на интересующее Вас слово стиха!</p><p>
-        Кроме того, поиск одновременно осуществляется не только по тексту Писания, но и по словарным статьям, а также по Библейским картам. Это поможет более подробно изучить слово Божье.
-        </p></td></tr><tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 30px; padding:15px; opacity:.8" src="IMG/audio.png" /></td><td><p>
-        Вы можете не только читать Библию, но и слушать ее. Кликните на название интересующей Вас книги в основном меню и у Вас появится возможность прослушать аудиозаписи всех глав (если аудиоплеер не работает или Вы хотите сохранить себе аудио-версию главы, кликните на ссылку "Скачать"). Также на странице главы той или иной книги Писания есть вкладка "Аудио", в которой так же можно прослушать аудио-версию главы.
-        </p></td></tr><tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 30px; padding:15px; opacity:.8" src="IMG/day.png" /></td><td><p>
-        В верхнем левом углу Вы можете посмотреть какие Библейские чтения назначены сегодня Церковью. Также, кликая на соответствующие ссылки можно "путешествовать" по всем дням года, изучая положенные на каждый день чтения. 
-        </p></td></tr><tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 30px; padding:15px; opacity:.8" src="IMG/info.png" /></td><td><p>
-        Возле имен большинства толкователей Вы можете увидеть значок, кликнув на который Вам будет представлена информация о толкователе. Обратите на это внимание, потому что интересующий Вас экзегет может быть как православного, так и инославного вероисповедания (хотя таковых на нашем сайте немного).</p>
-        </td></tr><tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 40px; padding:15px; opacity:.8" src="IMG/a-z.png" /></td><td><p>
-        На сайте имеются Библейские словари и энциклопедии, которые связаны с текстом Библии. Просматривая стих, кликните на слово, значение которого необходимо узнать, и на открывшейся странице Вам будет доступен результат поиска этого слова по Библии, а также все статьи словарей и энциклопедий, в которых говорится об этом термине. Таким образом Библейская Симфония объединена с библейскими словарями.</p></td></tr>
-        <tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 30px; padding:15px; opacity:.8" src="IMG/svitok.png" /></td><td><p>
-        Совместно с международным проектом <span class="ssilki_v_texte"><a class="ssilki_v_texte" href="http://www.codex-sinaiticus.net/ru/">"Синайский кодекс"</a></span> на сайте реализована возможность просмотра манускриптов (рукописей) из Синайского кодекса. На страницах главы книги, стиха или толкования Вы можете кликнуть на соответствующий значок и тут же во всплывающем окне исследовать оригинальный манускрипт рассматриваемого стиха или главы.</p>
-        </td></tr><tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 30px; padding:15px; opacity:.8" src="IMG/map_ser.png" /></td><td><p>
-        На нашем сайте размещены карты, связанные с наиболее важными событиями Библейской истории. Поиск по картам также связан с общим поиском (по Симфонии и словарям). Кликая на название какого-то географического места в стихе Писания, Вы увидите в каких еще стихах данное наименование встречается, какие словарные статьи с ним связаны и на каких картах его можно посмотреть.</p></td></tr>
-        <tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 25px; padding:15px; opacity:.8" src="IMG/zak.png" /></td><td><p>
-        Зарегистрированным пользователям доступна функция добавления закладок. Оставляйте закладки на главу или на стих, они постоянно будут доступны Вам с любой страницы проекта. Всего можно заложить до 5 закладок.</p></td></tr>
-        <tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 30px; padding:15px; opacity:.8" src="IMG/notes.png" /></td><td><p>
-        Также зарегистрированным пользователям доступна возможность оставлять заметки на стихи Писания.
-        Как часто бывает просто необходимо записать какую-то краткую мысль, пришедшую в голову при прочтении того или иного стиха Библии, или резюмировать смысл сразу нескольких толкований, а может быть Вы готовитесь к лекции по изучению Слова Божьего? Теперь сразу же на сайте (на странице стиха или толкования) Вы можете оставить заметку, которая будет видна только Вам. Для этого кликните на значок <img src="IMG/notes_mini.png" title="Добавить заметку"/ > и введите заметку. Сохраните ее, и Вы можете вновь и вновь возвращаться к ней либо со страницы стиха, либо выбирая ее из списка всех Ваших заметок у себя в <span class="ssilki_v_texte"><a href="my_zametki.php">келии</a></span>. Если Вы читаете стих и видите цветной значок <img src="IMG/notes_yes_mini.png" title="Редактировать заметку"/ >, значит заметка на этот стих у Вас уже имеется и Вы можете отредактировать ее, кликнув на тот же значок.
-        Удалите весь текст заметки и сохраните ее - теперь заметка полностью удалена.</p><p>
-        Пользуйтесь! И больше светлых мыслей от Господа, достойных записи!</p></td></tr>
-        <tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;"><img style="width: 30px; padding:15px; opacity:.8" src="IMG/favorite.png" /></td><td><p>
-        Зарегистрированным пользователям доступна функция выделения маркером избранных стихов.
-        Выделите группу стихов (или один стих) мышкой, кликните по появившейся звездочке, добавьте теги, выберите цвет маркера и избранные стихи всегда будут выделены соответствующим цветом. Удалять или группировать стихи по тегам Вы можете на соответствующей странице в Вашей келии.</p></td></tr>
-        <tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;"><img style="width: 25px; padding:15px; opacity:.8" src="IMG/fav_tolk.png" /></td><td><p>
-        Количество толкований на нашем сайте давно уже превышает 100 000. На отдельные стихи количество толкований может быть более 20-ти. Но среди всех прочих толкований, именно одно может быть наиболее близко и понятно. И для того, чтобы в следующий раз, когда Вы вновь будете читать какой-либо стих, Вам было легче сориентироваться в многообразии толкований, можно отметить одно толкование как понравившееся.</p><p>
-        Для этого зарегистрированный пользователь должен кликнуть по соответствующей иконке и толкование будет добавлено в избранное.</p><p>
-        Среди прочего списка имен экзегетов, толковавших выбранный стих, имя экзегета, чье толкование находится в избранном, будет выделено маркером.</p><p>
-        На один стих можно добавлять сколько угодно избранных толкований. Чтобы удалить толкование из избранного, вновь кликните по иконке.</p></td></tr>
-        <tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 40px; padding:15px; opacity:.8" src="IMG/plan.png" /></td><td><p>
-        Зарегистрированные пользователи могут читать Библию по одному из нескольких планов чтения! Это позволит Вам за год прочитать всю Библию, программа сама будет следить за текущими чтениями, а также за теми, которые Вы пропустили.</p><p>
-        Также, поставив соответствующую "галочку" в настройках плана, Вы будете ежедневно получать текст Писания на свою электронную почту.</p></td></tr>
-        <tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;">
-        <img style="width: 30px; padding:15px; opacity:.8" src="IMG/add.png" /></td><td>
-        <p>Проекту необходима Ваша помощь! Если на сайте нет какого-либо толкования, но оно имеется у Вас, Вы можете добавить его. Как это сделать? Прочитайте <span class="ssilki_v_texte"><a class="ssilki_v_texte" href='pravila.php'>правила по добавлению толкований</a></span>. Ваша помощь поможет собрать как можно больше святоотеческих (и не только) толкований Священного Писания.<br /></p>
-        <p>Заранее благодарим за помощь и поддержку!</p> 
-        </td></tr><tr><td style=" vertical-align:middle; text-align: center; border-right: 8px solid #ddd;"><img style="width: 40px; padding:15px;opacity:.8" src="IMG/grek.png" /></td><td>
-        <p>Для более корректного отображения отдельных текстов рекомендуем Вам установить <span class="ssilki_v_texte"><a class="ssilki_v_texte" href="TYPE/greek.rar" target="_blank">греческий</a> и <a class="ssilki_v_texte" href="TYPE/cyrillic.rar">церковно-славянский</a></span> шрифты.</p> 
-        </td></tr></table><br /><br /><div style='text-align: center'><b>Помощи Божией в изучении Его слова!</b><br /><br /><br /><br /></div></div>
-        </td>
-
-        </div>
-</div>
-        <!--правый блок -->
-        <div class="col-sm-3">
-            <div class="box" id="boxpr" style="width:300px"><h3 style="font-size: 18px">&#949;&#960;&#953;&#947;&#961;&#945;&#966;&#951;</h3><p style="font-family: Gabriola;font-size: 24px;line-height: 1;">"Различные толкования даются не для того, чтобы их сравнивать и сопоставлять, какое из них лучше и адекватнее: каждое из них будет оправданным, если поможет хотя бы одному из тех, кто встал на путь богопознания, продвинуться по этому пути".</b></p><p style='text-align: right; margin-right: 10px; font-weight: normal; color: #333;font-family: Gabriola;font-size: 24px;line-height: 1;'>Гайденко В.П.</p><br />
+            <div class="page-content"><hr />
+                <p>
+                Приветствуем Вас на Православном сайте, посвященном исследованию и толкованию Священного Писания! В настоящее время ЭкзегетЪ.RU - самая функциональная Онлайн Библия в Рунете. На сайте имеются толкования Священного Писания, множество переводов, аудиобиблия, планы чтения Библии, словари, проповеди, Библейские карты. Читайте и изучайте Священное Писание, оставляйте закладки на нужные стихи, пишите заметки, исследуйте оригинальные манускрипты Писания, делитесь толкованиями с друзьями...</p>
+                <p>
+                    Как пользоваться нашим сайтом? Чуть выше Вы можете посмотреть подробное видео с описанием всего функционала нашего сайта. Также <a href="#">здесь</a> находится подробная справка.
+                </p>
+<p>Сейчас на сайте размещено <span class="ekz-bold">145 343</span> толкования на Священное Писание</p>
+            <div style='text-align: center'><b>Помощи Божией в изучении Его слова!</b></div>
+                <div class="news-list">
+                    <h3>НОВОСТИ</h3>
+                    <hr class="ekz">
+                        <ul class="news">
+                            <li><h4>19 июл. 2017 г.</h4>
+                            <p>Сейчас на сайте размещено <b>144 273</b> толкования на 33 365 стихов Священного Писания. Всего в Библии 37 107 стихов, то есть толкования имеются примерно на <b>90%</b> всего Священного Писания (на весь Новый Завет и часть Ветхого).</p>
+                            </li>
+                            <li><h4>4 мая 2017 г.</h4>
+                            <p>Улучшена функция по добавлению личных закладок. Теперь, добавляя закладку, Вы тут же видите, какие цвета закладок уже заняты другими Вашими закладками, а какие свободны.<br/>
+                            <p>Функция закладок (как и многие другие полезные функции) доступна только зарегистрированным пользователям.</p>
+                            </li>
+                            <li><h4>24 апреля 2017 г.</h4>
+                            <p>Библия (от греч. βιβλία – книги) – собрание Богодухновенных книг, написанных пророками и апостолами по велению Духа Божия.<br />Еще больше информации о Библии, история написания и некоторые факты о ней на нашем <a href="#">сайте.</a>
+                            </p>
+                            </li>
+                            <li><h4>19 апр. 2017 г.</h4>
+                            <p>Сейчас на сайте размещено 132 786 толкований 349 экзегетов на 31 572 стиха Священного Писания. Толкования имеются примерно на 85% всего Священного Писания (на весь Новый Завет и часть Ветхого).
+                            </p>
+                            </li>
+                        </ul>
+                </div>
+                <div class="news-list">
+                    <h3>ОБНОВЛЕНИЯ</h3>
+                    <hr class="ekz">
+                        <ul class="news">
+                            <li><h4>19 июл. 2017 г.</h4>
+                            <p>Сейчас на сайте размещено <b>144 273</b> толкования на 33 365 стихов Священного Писания. Всего в Библии 37 107 стихов, то есть толкования имеются примерно на <b>90%</b> всего Священного Писания (на весь Новый Завет и часть Ветхого).</p>
+                            </li>
+                            <li><h4>4 мая 2017 г.</h4>
+                            <p>Улучшена функция по добавлению личных закладок. Теперь, добавляя закладку, Вы тут же видите, какие цвета закладок уже заняты другими Вашими закладками, а какие свободны.<br/>
+                            <p>Функция закладок (как и многие другие полезные функции) доступна только зарегистрированным пользователям.</p>
+                            </li>
+                            <li><h4>24 апреля 2017 г.</h4>
+                            <p>Библия (от греч. βιβλία – книги) – собрание Богодухновенных книг, написанных пророками и апостолами по велению Духа Божия.<br />Еще больше информации о Библии, история написания и некоторые факты о ней на нашем <a href="#">сайте.</a>
+                            </p>
+                            </li>
+                            <li><h4>19 апр. 2017 г.</h4>
+                            <p>Сейчас на сайте размещено 132 786 толкований 349 экзегетов на 31 572 стиха Священного Писания. Толкования имеются примерно на 85% всего Священного Писания (на весь Новый Завет и часть Ветхого).
+                            </p>
+                            </li>
+                        </ul>
+                </div>
             </div>
         </div>
-   
-</div>
-</section>
-
-
-<table align="center" cellpadding="0" cellspacing="0" border="0" style="width: 1000px; margin-top:10px">
-<tr>
-<td>
-
-
-</td>
-<td style="width:700px"> 
-
-<table align="center" width="1000" cellpadding="0" cellspacing="0" border="0" style="margin-top:0">
-<tr><td style="width:180px">
-
-
-<br /><!--noindex-->
-<a style="color:red" href="https://fond.predanie.ru/blago/340442/">Помочь нашему проекту</a><br /><br /><div style="width: 130px; border: 1px solid #C7C7C7; text-align: center; padding: 15px 5px;margin:0 10px">
-<a href="banners.php">НАШЫ<br />БАННЕРЫ</a>
-</div><br /><br />
-<div class="banners" align="center">
-<!-- Put this div tag to the place, where the Like block will be -->
-<div id="vk_like" style="width: 100px"></div>
-<br />
-<div id="fb-root" style="width: 100px"></div>
-<div class="fb-like" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false" style="width: 100px"></div>
-<br /><br />
-
-<div id="ok_shareWidget"></div>
-</div>
-<br /><br /><br /><br />
-</div>
-<!--/noindex--></td><td><div style="width:610px;">
-<td style="width:200px">
-<br /><span style="font-size:12px;color:#666">Наши друзья:</span><br /><br /><div style="text-align:center; margin-left:-10px">
+        <!--правый блок -->
+        <div class="col-md-3">
+            <div class="box" id="boxpr"><h3>&#949;&#960;&#953;&#947;&#961;&#945;&#966;&#951;</h3>
+                <hr class="ekz">
+                <p class="epigraph">"Различные толкования даются не для того, чтобы их сравнивать и сопоставлять, какое из них лучше и адекватнее: каждое из них будет оправданным, если поможет хотя бы одному из тех, кто встал на путь богопознания, продвинуться по этому пути".</b></p><p style='text-align: right; margin-right: 10px;'>Гайденко В.П.</p><br />
+            </div>
+            <br /><span style="font-size:12px;color:#666">Наши друзья:</span><br /><br /><div style="text-align:center; margin-left:-10px">
 <a href="http://fond.predanie.ru/?banner=1" target="_blank"><img src="https://ekzeget.ru/IMG/partners/banner_predanie-200x100-01.gif"></a><br /><br />
 <a href="http://www.bogoslov.ru" target="_blank"><IMG src="https://ekzeget.ru/IMG/partners/banner_bogoslov_293x79.gif" WIDTH=200 BORDER=0 ALT="Богослов.ру"></a><br /><br />
 <!-- banner Elitcy was add 26.07.17 -->
 <a href="https://dialog.elitsy.ru/"><img src="https://s3-eu-west-1.amazonaws.com/elitsy/static/b/questions_elitsy_200x90.png" border="0" alt="православная социальная сеть «Елицы»" width="200" height="90" /></a><br />
 </div><br />
 <div class="box"> 
-<h3>НОВОСТИ</h3>
- <div id="news"> <b><font color="#797979">19 июл. 2017 г.</font></b><p>Сейчас на сайте размещено <b>144 273</b> толкования на 33 365 стихов Священного Писания. Всего в Библии 37 107 стихов, то есть толкования имеются примерно на <b>90%</b> всего Священного Писания (на весь Новый Завет и часть Ветхого).</p><br /><b><font color="#797979">4 июн. 2017 г.</font></b><p>Добавлен перевод А.С. Десницкого на книги пророков Амоса и Исаии.</p><br /><b><font color="#797979">1 июн. 2017 г.</font></b><p>В поиске по сайту теперь можно искать стих, используя обычные библейские сокращения стиха. Например, введите <b>Мф. 1:2</b> и поисковик выдаст данный стих.
-</p><p>Поиск принимает различные варианты сокращений, однако стоит все-таки придерживаться наиболее распространенных вариантов.</p><br /><b><font color="#797979">4 мая 2017 г.</font></b><p>Улучшена функция по добавлению личных закладок. Теперь, добавляя закладку, Вы тут же видите, какие цвета закладок уже заняты другими Вашими закладками, а какие свободны.
-</p><p>Функция закладок (как и многие другие полезные функции) доступна только зарегистрированным пользователям.</p><br /><b><font color="#797979">24 апр. 2017 г.</font></b><p>Библия (от греч. &#946;&#953;&#946;&#955;&#943;&#945; – книги) – собрание Богодухновенных книг, написанных пророками и апостолами по велению Духа Божия.
-</p><p>
-</p><p>Еще больше информации о Библии, история написания и некоторые факты о ней на нашем <a href="/bible.php">сайте</a>.</p><br /><b><font color="#797979">19 апр. 2017 г.</font></b><p>Сейчас на сайте размещено 132 786 толкований 349 экзегетов на 31 572 стиха Священного Писания. Толкования имеются примерно на 85% всего Священного Писания (на весь Новый Завет и часть Ветхого).</p><br /><b><font color="#797979">16 апр. 2017 г.</font></b><p><span style="color:red">ХРИСТОС ВОСКРЕСЕ!</span>
-</p><p>Всех поздравляем с Пасхой Господней! Изучайте Слово Божье, радуйтесь о Воскресшем Спасителе, дарите пасхальную радость своим близким и дальним!</p><br /><b><font color="#797979">5 апр. 2017 г.</font></b><p>На нашем сайте реализовано большое количество функций для удобного и всестороннего изучения Библии. Поэтому пользователю бывает непросто сразу во всем разобраться. Предлагаем Вашему вниманию справку о том, <a href="kak_polzovatsya.php">как пользоваться нашим сайтом</a>. Прочитав ее внимательно, Вы откроете для себя много нового. 
-</p><p>
-</p><p>Если что-то в справке не отображено, обязательно об этом напишите! Также приветствуются любые вопросы по работе и функционалу сайта.</p><br /><b><font color="#797979">3 апр. 2017 г.</font></b><p>По просьбам пользователей в расширенном поиске добавлена функция строгого соответствия.</p><br /><b><font color="#797979">31 мар. 2017 г.</font></b><p>Добавлена аудиобиблия Ветхий Завет в современном переводе Российского Библейского Общества.
-</p><p>Читает Дмитрий Оргин. Запись предоставлена студией озвучания "Глагол".</p><br /></div></div><br /><div align="center">
+</div><div align="center">
 
 <a href="http://orphus.ru" id="orphus" target="_blank"><img alt="Система Orphus" src="IMG/orphus.gif" border="0" width="125" height="115" /></a>
-</div><br /></td></tr></table>
+</div>
+        </div>
+   
+</div>
+</section>
+
+<footer class="footer_pano">
 <!--noindex-->
 <div id="message">
-<a id="toTop" href="#"><img src="IMG/vverh.png" /></a></div><div id="footer"><br /><br />
-<table width="1000" align="center" cellpadding="7" cellspacing="0" style="background: #ddd; border: 1px solid #AFAFAF;">
-<tr >
-<td colspan=2>
-<a href="pravila.php"> Правила</a> |
-<a href="new_tolk.php">Обновления</a> |
-<a href="generator.php"> Генератор ссылок</a> |
-<a href="search.php"> Поиск</a> |
-<a href="zap.php"> Гостевая</a> <br />
-<a href="propovedi.php">Проповеди</a> |
-<a href="slovari.php">Словари</a> |
-<a href="maps.php"> Карты</a> |
-<a href="tolks_all.php"> Экзегеты</a> |
-<a href="lektorij.php"> Лекторий</a> <br /><br />
+<a id="toTop" href="#"><img src="IMG/vverh.png" /></a></div>
+<div class="container">
+        <div class="footer-menu">
+            <div class="row">
+                <div class="col-md-3"><a href="/.."><img src="/IMG/logo.png" class="logo-bottom" title="Экзегет. Библия и толкования"></a></div>
+                <div class="col-md-5">
+                    <a href="pravila.php"> Правила</a> |
+                    <a href="new_tolk.php">Обновления</a> |
+                    <a href="generator.php"> Генератор ссылок</a> |
+                    <a href="search.php"> Поиск</a> |
+                    <a href="zap.php"> Гостевая</a> <br />
+                    <a href="propovedi.php">Проповеди</a> |
+                    <a href="slovari.php">Словари</a> |
+                    <a href="maps.php"> Карты</a> |
+                    <a href="tolks_all.php"> Экзегеты</a> |
+                    <a href="lektorij.php"> Лекторий</a>
+                    </div>
+                    <div class="col-md-3 text-right">
+                            <a href="https://pda.ekzeget.ru/" class="btn btn-default">Мобильная версия</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-info">
+            <a href="/donation" class="btn btn-lg btn-donation">Пожертвовать</a></div>
+        
+            <div class="banners-bottom">
+            <a href="http://www.bogoslov.ru" target="_blank"><img src="https://ekzeget.ru/IMG/partners/banner_88x31.png" height=31 width=88 BORDER=0 alt="Богослов.ру"></a> &nbsp; 
+                <a href="https://fond.predanie.ru/?banner=1" target="_blank"><img src="https://ekzeget.ru/IMG/partners/banner_predanie-88x31_0.gif"></a> &nbsp; 
+                <a href='http://www.barysh-eparhia.ru/' target="_blank"><img src='https://ekzeget.ru/IMG/partners/banner_mini.png' width=88 height=34 title="Барышская епархия" alt='Барышская епархия'></a> &nbsp; 
+                <a href="http://www.андреевский-храм.рф/" target="_blank"><img
+                src="https://ekzeget.ru/IMG/partners/Banner.png"
+                title="Храм апостола Андрея Первозванного" width=88 height=31 border=0></a> &nbsp; 
+                <!--begin of www.hristianstvo.ru
+                <a href="https://www.hristianstvo.ru/?from=13606" target="_blank"><img
+                src="https://www.hristianstvo.ru/images/ru-88x31-lightgray1.gif"
+                title="Православное христианство.ru" width=88 height=31 border=0></a> &nbsp; 
+                end of www.hristianstvo.ru-->
 
-</td>
-<td align="right" width="400" style="vertical-align: top">
-<a href="https://pda.ekzeget.ru/">Мобильная версия</a>
-</td>
-</tr>
+                <!-- Yandex.Metrika informer --> &nbsp; 
+                <a href="https://metrika.yandex.ru/stat/?id=23728522&amp;from=informer"
+                target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/23728522/2_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" onclick="try{Ya.Metrika.informer({i:this,id:23728522,lang:'ru'});return false}catch(e){}" /></a> &nbsp; 
+                <!-- /Yandex.Metrika informer -->
+                <noscript><div><img src="https://mc.yandex.ru/watch/23728522" style="position:absolute; left:-9999px;" alt="" /></div></noscript> 
+                <!-- /Yandex.Metrika counter -->
 
-<tr>
-<td style="border-top: 1px solid #AFAFAF;vertical-align: top"><br />
-<img src="IMG/ya.png" title="Пожертвование на развитие проекта"/><br />
-<iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/small.xml?account=41001159830176&quickpay=small&yamoney-payment-type=on&button-text=04&button-size=s&button-color=white&targets=%D0%9F%D0%BE%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5+%D0%BD%D0%B0+%D1%81%D0%B0%D0%B9%D1%82+ekzeget.ru&default-sum=100" width="155" height="31"></iframe>
-<br />
-<span style="color:green">Кошелек № 41001159830176 </span>
-<hr />
-<img src="IMG/qiwi.png" title="Пожертвование на развитие проекта"/><br />
-<span style="color:green">Кошелек № +79378737360 </span>
-<hr />
-<img src="IMG/webmoney.png" title="Пожертвование на развитие проекта"/><br />
-<span style="color:green">WMR Кошелек № R328560859534 </span>
-<span style="color:green">WMZ Кошелек № Z726683259332 </span>
+                <noscript><div style="position:absolute;left:-10000px;">
+                <img src="//top-fwz1.mail.ru/counter?id=2566972;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+                </div></noscript> 
+                <!-- //Rating@Mail.ru counter -->
+                <!-- Rating@Mail.ru logo -->
+                <a href="https://top.mail.ru/jump?from=2566972">
+                <img src="//top-fwz1.mail.ru/counter?id=2566972;t=361;l=1" 
+                style="border:0;" height="18" width="88" alt="Рейтинг@Mail.ru" /></a>
+                <!-- //Rating@Mail.ru logo --> 
+            </div>
+            <div class="founder text-right"><b>&copy; С. Жидков, 2011 - 2017 гг.</b></div>
+<!--/noindex-->
+        </div>
+</footer>
 
-</td>
-<td align="left" style="border-top: 1px solid #AFAFAF; color: #222"><br />
-<b>Реквизиты для пожертвований:</b><br />
-Наименование Банка получателя:    АО "БАНК РУССКИЙ СТАНДАРТ"<br />
-Номер счета в банке:    40817810800993212857<br />
-БИК:    044525151<br />
-ИНН:    7707056547<br />
-К/с:    30101810845250000151<br />
-Получатель платежа: ЖИДКОВ СЕРГЕЙ ВЛАДИМИРОВИЧ<br />
-С пометкой "на сайт Экзегет.ру".<br /><br />
-</td>
-<td style="border-top: 1px solid #AFAFAF;color: #222"><br />
-<b>Реквизиты в Сбербанке:</b><br />
-Наименование Банка получателя: УЛЬЯНОВСКОЕ ОТДЕЛЕНИЕ N8588 ПАО СБЕРБАНК Г.УЛЬЯНОВСК<br />
-Номер счета в банке:    40817810769000398126<br />
-БИК:    047308602<br />
-ИНН:    7707083893<br />
-КПП:    732502002<br />
-К/с:    30101810000000000602<br />
-Получатель платежа: ЖИДКОВ СЕРГЕЙ ВЛАДИМИРОВИЧ<br />
-С пометкой "на сайт Экзегет.ру".<br />
-
-</td>
-
-</tr>
-<tr>
-<td colspan="3" style="text-align:center"><br />
-<A href="http://www.bogoslov.ru" target="_blank"><IMG src="https://ekzeget.ru/IMG/partners/banner_88x31.png" HEIGHT=31 WIDTH=88 BORDER=0 ALT="Богослов.ру"></A> &nbsp; 
-<a href="https://fond.predanie.ru/?banner=1" target="_blank"><img src="https://ekzeget.ru/IMG/partners/banner_predanie-88x31_0.gif"></a> &nbsp; 
-<a href='http://www.barysh-eparhia.ru/' target="_blank"><img src='https://ekzeget.ru/IMG/partners/banner_mini.png' width=88 height=34 title="Барышская епархия" alt='Барышская епархия'></a> &nbsp; 
-<a href="http://www.андреевский-храм.рф/" target="_blank"><img
-src="https://ekzeget.ru/IMG/partners/Banner.png"
-title="Храм апостола Андрея Первозванного" width=88 height=31 border=0></a> &nbsp; 
-<!--begin of www.hristianstvo.ru
-<a href="https://www.hristianstvo.ru/?from=13606" target="_blank"><img
-src="https://www.hristianstvo.ru/images/ru-88x31-lightgray1.gif"
-title="Православное христианство.ru" width=88 height=31 border=0></a> &nbsp; 
-end of www.hristianstvo.ru-->
-
-<!-- Yandex.Metrika informer --> &nbsp; 
-<a href="https://metrika.yandex.ru/stat/?id=23728522&amp;from=informer"
-target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/23728522/2_1_FFFFFFFF_EFEFEFFF_0_pageviews"
-style="width:80px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры)" onclick="try{Ya.Metrika.informer({i:this,id:23728522,lang:'ru'});return false}catch(e){}" /></a> &nbsp; 
-<!-- /Yandex.Metrika informer -->
-<noscript><div><img src="https://mc.yandex.ru/watch/23728522" style="position:absolute; left:-9999px;" alt="" /></div></noscript> 
-<!-- /Yandex.Metrika counter -->
-
-<noscript><div style="position:absolute;left:-10000px;">
-<img src="//top-fwz1.mail.ru/counter?id=2566972;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
-</div></noscript> 
-<!-- //Rating@Mail.ru counter -->
-<!-- Rating@Mail.ru logo -->
-<a href="https://top.mail.ru/jump?from=2566972">
-<img src="//top-fwz1.mail.ru/counter?id=2566972;t=361;l=1" 
-style="border:0;" height="18" width="88" alt="Рейтинг@Mail.ru" /></a>
-<!-- //Rating@Mail.ru logo -->
-&nbsp; 
+<script type="text/javascript" src="orphus.js"></script>
+<script defer type="text/javascript" src="/js/head_scripts.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $("#myTab a").click(function(e){
+    e.preventDefault();
+    $(this).tab('show');
+  });
+});
+</script> 
 <script> 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), 
@@ -488,27 +440,4 @@ ga('create', 'UA-86114429-1', 'auto');
 ga('send', 'pageview'); 
 
 </script> 
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $("#myTab a").click(function(e){
-    e.preventDefault();
-    $(this).tab('show');
-  });
-});
-</script> 
-
-</td></tr>
-<tr>
-<td colspan="2" width="250" style="vertical-align: bottom"><span style="font-size: 13px; text-align: center; color: #333">
-<b>© С. Жидков, 2011 - 2017 гг.</b><br /></span>
-</td>
-
-<td align="right" width="400" style="vertical-align: bottom">
-<span style="font-weight: normal;color: #333">Страница сгенерирована за 0.471 сек.</span>
-</td>
-</tr>
-</table>
-</div><br />
-<script type="text/javascript" src="orphus.js"></script>
-<!--/noindex--></body></html>
+</body></html>
