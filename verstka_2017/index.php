@@ -29,10 +29,8 @@ VK.Widgets.Like("vk_like", {type: "mini"});
 <!-- Скрипты кнопок соцсетей -->
 <!-- Счетчики -->
 
-<!-- Rating@Mail.ru counter -->
-<script defer type="text/javascript" src="/js/socseti/Rating.Mail.js"></script> 
+
 <!-- Счетчики -->
-<script defer type="text/javascript" src="/js/my/head_scripts.js"></script> <!-- все скрипты в одном -->
 <!--/noindex-->
 <meta name='yandex-verification' content='6940e802632820aa' />
 
@@ -257,11 +255,14 @@ VK.Widgets.Like("vk_like", {type: "mini"});
             </div>
     </div>
 <!-- КОНЕЦ МЕНЮ -->
+<br/>
         <!-- BANNERs -->
         <!--noindex-->
-        <div class="pano-banners">
-        <a style="color:red" href="https://fond.predanie.ru/blago/340442/">Помочь нашему проекту</a><br />
-        <a href="banners.php">НАШЫ<br />БАННЕРЫ</a>
+        <div class="pano-banners calendar_inside text-center">
+                <br />
+                <a href="https://fond.predanie.ru/blago/340442/" class="btn btn-lg btn-danger btn-shadow">Помочь нашему проекту</a><br />
+                <br />
+                <a href="/banners" class="btn btn-lg btn-warning btn-shadow">Наши баннеры</a>
                 <div class="banners" align="center">
                     <!-- Put this div tag to the place, where the Like block will be -->
                     <div id="vk_like" style="width: 100px"></div>
@@ -312,22 +313,23 @@ VK.Widgets.Like("vk_like", {type: "mini"});
                 <div class="news-list">
                     <h3>ОБНОВЛЕНИЯ</h3>
                     <hr class="ekz">
-                        <ul class="news">
-                            <li><h4>19 июл. 2017 г.</h4>
-                            <p>Сейчас на сайте размещено <b>144 273</b> толкования на 33 365 стихов Священного Писания. Всего в Библии 37 107 стихов, то есть толкования имеются примерно на <b>90%</b> всего Священного Писания (на весь Новый Завет и часть Ветхого).</p>
+                        <ul class="news" id="update">
+                            <li><h4>14 авг. 2017 г. 08:35</h4>
+                            <p><span class="blood">3 Цар. 7:21.</span> <a href="">Ишодад из Мерва</a> (Александр Самойлов).</p>
                             </li>
-                            <li><h4>4 мая 2017 г.</h4>
-                            <p>Улучшена функция по добавлению личных закладок. Теперь, добавляя закладку, Вы тут же видите, какие цвета закладок уже заняты другими Вашими закладками, а какие свободны.<br/>
-                            <p>Функция закладок (как и многие другие полезные функции) доступна только зарегистрированным пользователям.</p>
+                            <li><h4>14 авг. 2017 г. 08:33</h4>
+                            <p><span class="blood">3 Цар. 7:20.</span> <a href="">Беда Достопочтенный</a> (Александр Самойлов).</p>
                             </li>
-                            <li><h4>24 апреля 2017 г.</h4>
-                            <p>Библия (от греч. βιβλία – книги) – собрание Богодухновенных книг, написанных пророками и апостолами по велению Духа Божия.<br />Еще больше информации о Библии, история написания и некоторые факты о ней на нашем <a href="#">сайте.</a>
-                            </p>
+                            <li><h4>14 авг. 2017 г. 08:31</h4>
+                            <p><span class="blood">3 Цар. 7:19.</span> <a href="">Беда Достопочтенный</a> (Александр Самойлов).</p>
                             </li>
-                            <li><h4>19 апр. 2017 г.</h4>
-                            <p>Сейчас на сайте размещено 132 786 толкований 349 экзегетов на 31 572 стиха Священного Писания. Толкования имеются примерно на 85% всего Священного Писания (на весь Новый Завет и часть Ветхого).
-                            </p>
+                            <li><h4>14 авг. 2017 г. 06:54</h4>
+                            <p><span class="blood">3 Цар. 7:18.</span> <a href="">Беда Достопочтенный</a> (Александр Самойлов).</p>
                             </li>
+                            <li><h4>14 авг. 2017 г. 06:51</h4>
+                            <p><span class="blood">3 Цар. 7:17.</span> <a href="">Беда Достопочтенный</a> (Александр Самойлов).</p>
+                            </li>
+
                         </ul>
                 </div>
             </div>
@@ -338,7 +340,8 @@ VK.Widgets.Like("vk_like", {type: "mini"});
                 <hr class="ekz">
                 <p class="epigraph">"Различные толкования даются не для того, чтобы их сравнивать и сопоставлять, какое из них лучше и адекватнее: каждое из них будет оправданным, если поможет хотя бы одному из тех, кто встал на путь богопознания, продвинуться по этому пути".</b></p><p style='text-align: right; margin-right: 10px;'>Гайденко В.П.</p><br />
             </div>
-            <br /><span style="font-size:12px;color:#666">Наши друзья:</span><br /><br /><div style="text-align:center; margin-left:-10px">
+            <div class="calendar_inside box2 text-center">
+            <h4>Наши друзья:</h4>
 <a href="http://fond.predanie.ru/?banner=1" target="_blank"><img src="https://ekzeget.ru/IMG/partners/banner_predanie-200x100-01.gif"></a><br /><br />
 <a href="http://www.bogoslov.ru" target="_blank"><IMG src="https://ekzeget.ru/IMG/partners/banner_bogoslov_293x79.gif" WIDTH=200 BORDER=0 ALT="Богослов.ру"></a><br /><br />
 <!-- banner Elitcy was add 26.07.17 -->
@@ -362,7 +365,7 @@ VK.Widgets.Like("vk_like", {type: "mini"});
         <div class="footer-menu">
             <div class="row">
                 <div class="col-md-3"><a href="/.."><img src="/IMG/logo.png" class="logo-bottom" title="Экзегет. Библия и толкования"></a></div>
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <a href="pravila.php"> Правила</a> |
                     <a href="new_tolk.php">Обновления</a> |
                     <a href="generator.php"> Генератор ссылок</a> |
@@ -372,18 +375,15 @@ VK.Widgets.Like("vk_like", {type: "mini"});
                     <a href="slovari.php">Словари</a> |
                     <a href="maps.php"> Карты</a> |
                     <a href="tolks_all.php"> Экзегеты</a> |
-                    <a href="lektorij.php"> Лекторий</a>
+                    <a href="lektorij.php"> Лекторий</a> | <a href="https://pda.ekzeget.ru/">Мобильная версия</a>
                     </div>
                     <div class="col-md-3 text-right">
-                            <a href="https://pda.ekzeget.ru/" class="btn btn-default">Мобильная версия</a>
+                        <a href="/donation" class="btn btn-lg btn-donation">Пожертвовать</a>     
                 </div>
             </div>
         </div>
         <hr>
-        <div class="footer-info">
-            <a href="/donation" class="btn btn-lg btn-donation">Пожертвовать</a></div>
-        
-            <div class="banners-bottom">
+        <div class="banners-bottom">
             <a href="http://www.bogoslov.ru" target="_blank"><img src="https://ekzeget.ru/IMG/partners/banner_88x31.png" height=31 width=88 BORDER=0 alt="Богослов.ру"></a> &nbsp; 
                 <a href="https://fond.predanie.ru/?banner=1" target="_blank"><img src="https://ekzeget.ru/IMG/partners/banner_predanie-88x31_0.gif"></a> &nbsp; 
                 <a href='http://www.barysh-eparhia.ru/' target="_blank"><img src='https://ekzeget.ru/IMG/partners/banner_mini.png' width=88 height=34 title="Барышская епархия" alt='Барышская епархия'></a> &nbsp; 
@@ -413,15 +413,17 @@ VK.Widgets.Like("vk_like", {type: "mini"});
                 <img src="//top-fwz1.mail.ru/counter?id=2566972;t=361;l=1" 
                 style="border:0;" height="18" width="88" alt="Рейтинг@Mail.ru" /></a>
                 <!-- //Rating@Mail.ru logo --> 
-            </div>
+        </div>
             <div class="founder text-right"><b>&copy; С. Жидков, 2011 - 2017 гг.</b></div>
 <!--/noindex-->
         </div>
 </footer>
 
-<script type="text/javascript" src="orphus.js"></script>
-<script defer type="text/javascript" src="/js/head_scripts.js"></script>
+<script type="text/javascript" src="/orphus/orphus.js"></script>
+<script defer type="text/javascript" src="/js/head_scripts.js"></script><!-- все скрипты в одном -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- Rating@Mail.ru counter -->
+<script defer type="text/javascript" src="/js/Rating.Mail.js"></script> 
 <script type="text/javascript">
 $(document).ready(function(){ 
   $("#myTab a").click(function(e){

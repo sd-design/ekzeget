@@ -118,5 +118,9 @@ img.logo-bottom{height: 60px; margin-right: 50px; opacity: 0.77;}
 .banners-bottom{padding: 25px 0; text-align: center}
 .btn-donation{background-color: #F9D063; border: 1px solid #eac35c;color:#f7f7f7;box-shadow: 0 5px 13px rgba(0,0,0,0.35);}
 .btn-donation:hover{ border: 1px solid #ffd565;box-shadow: 0 2px 13px rgba(0,0,0,0.35);}
+.btn-shadow{box-shadow: 0 5px 13px rgba(0,0,0,0.35);}
+.btn-shadow:hover{box-shadow: 0 2px 13px rgba(0,0,0,0.35);}
 #toTop {display: block;display: none;z-index: 10002;opacity: .4;position: fixed;bottom: 20px; right: 20px}
 #toTop:hover {opacity: 1;cursor: pointer}
+.blood{color:#CA1D06; font-weight: 700;}
+.box2{padding: 10px 15px 25px 15px;}
