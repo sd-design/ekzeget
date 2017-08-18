@@ -10,6 +10,7 @@
 .rss a img:hover{ opacity: 0.95;}
 hr.ekz{border-top: 1px solid #F9D063; margin-top:10px;}
 
+#page{background-color: #F9F9F9}
 #page_content3{max-height:140px; padding-top: 5px;}
 #zavtr_chten{text-align: center; padding-top: 6px}
 .scroll-pane1{overflow:scroll;overflow-x:hidden; }
@@ -104,7 +105,7 @@ ul.tabNavigationmenu li a:focus {outline: 0}
 .news-list h3{color:#333;margin-bottom: 12px;}
 ul.news li{list-style: none; margin-bottom: 17px;}
 ul.news li p{margin:0 0 7px 0;}
-.news h4{color:#C7C7C7; margin-bottom:0;font-size: 16px;}
+.news h4{color:#b7b7b7; margin-bottom:0;font-size: 16px;}
 #myTab{border:none; padding: 12px 15px 0 15px; text-align: center}
 #myTab > li{width:50%; }
 #myTab > li > a{padding: 5px;}
@@ -123,4 +124,23 @@ img.logo-bottom{height: 60px; margin-right: 50px; opacity: 0.77;}
 #toTop {display: block;display: none;z-index: 10002;opacity: .4;position: fixed;bottom: 20px; right: 20px}
 #toTop:hover {opacity: 1;cursor: pointer}
 .blood{color:#CA1D06; font-weight: 700;}
+.pano-banners, .box1, .box2, .box3{background-color:#fff;}
+.box {min-width:200px;width:200px;-moz-box-shadow:0 0 15px #868686;-webkit-box-shadow:0 0 15px #868686;box-shadow:0 0 15px #868686;margin-top: 10px; padding-top: 1px}
+.box1{margin:15px 0 10px 0;padding: 5px 5px 20px 5px;}
 .box2{padding: 10px 15px 25px 15px;}
+.box3{padding: 10px 15px 25px 15px; margin-top:15px;}
+.pano-banners{margin-bottom:35px;}
+#bible_version{width:100%}
+.bible-poem-text{padding: 0;}
+#osn_text .bible-poem-text a{line-height: 1.3; font-size: 109%;font-family: Georgia}
+.page-content h1{color: #CA0606;font-family: Georgia, "Times New Roman";text-align: center;font-weight: 900;font-size: 28px;margin: 9px 0;text-transform: capitalize;}
+.next{margin: 4px 0;color:#999;text-align: center; text-decoration: none;text-transform: capitalize;display: block; vertical-align: middle;}
+.next > span{font-family: Georgia, "Times New Roman";font-size: 28px;}
+.next:hover{text-decoration: none;}
+.next:hover span{color:#F9D063;}
+.glav{margin-bottom: 10px;}
+.ssil_uvelich{float:left}
+.fulltext{display:inline;}
+.ssil_uvelich_gl a{color:#F9D063;}
+#icon a{padding:2px;}
+#open1_box a, #open3_box a{cursor: pointer; margin-bottom:10px}
